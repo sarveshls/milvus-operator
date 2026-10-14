@@ -140,6 +140,8 @@ docker-prepare: build-release out/config/assets/templates
 
 docker-tool-prepare: build-config-tool
 	mkdir -p out/tool
+	cp ./scripts/run.sh ./out/tool/run.sh
+	cp ./scripts/init.sh ./out/tool/init.sh
 	cp ./scripts/run-helm.sh ./out/tool/run-helm.sh
 	cp ./out/merge ./out/tool/merge
 	cp ./out/cp ./out/tool/cp
